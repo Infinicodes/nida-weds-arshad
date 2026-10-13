@@ -1,0 +1,1071 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f8edf7" />
+<meta name="description" content="A beautiful wedding invitation celebrating Nida Khan and Mohd Arshad, November 12, 2026, at Milan Vatika, Agra." />
+<title>Nida & Arshad — A Wedding Invitation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --lavender: #e9d9ef;
+  --lavender-dark: #a887b5;
+  --pink: #f8e7ed;
+  --pink-deep: #e8b5c8;
+  --cream: #fffaf7;
+  --gold: #b99a62;
+  --gold-light: #ead8a9;
+  --ink: #382b3c;
+  --muted: #817181;
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "DM Sans", sans-serif;
+  --script: "Great Vibes", cursive;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+
+::selection {
+  background: var(--lavender);
+  color: var(--ink);
+}
+
+.topbar {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 23px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.brand {
+  font-family: var(--serif);
+  letter-spacing: 3px;
+  font-size: 19px;
+}
+
+.topbar a {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ffffff80;
+  padding-bottom: 6px;
+}
+
+.hero {
+  min-height: 100svh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden;
+  isolation: isolate;
+  color: white;
+  background:
+    linear-gradient(180deg, #271b35a8, #39263878 43%, #241a30db),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=85")
+    center 48% / cover no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 15px;
+  border: 1px solid #e8d6b87d;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 5%, #140f2060 100%);
+  z-index: -1;
+}
+
+.hero-content {
+  width: min(850px, 90%);
+  padding: 110px 0 75px;
+  animation: arrive 1.3s ease both;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  line-height: 2;
+}
+
+.hero .eyebrow { color: #f1dcb7; }
+
+.hero h1 {
+  margin: 25px 0 6px;
+  font: 400 clamp(68px, 12vw, 142px)/.88 var(--script);
+  text-shadow: 0 5px 35px #100b1c55;
+}
+
+.ampersand {
+  display: inline-block;
+  color: var(--gold-light);
+  font: 400 .52em var(--serif);
+  padding: 0 5px;
+  vertical-align: 12px;
+}
+
+.hero-subtitle {
+  margin: 26px 0 0;
+  font: 500 clamp(15px, 2.2vw, 20px) var(--serif);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  color: var(--gold);
+  margin: 27px auto;
+}
+
+.ornament::before,
+.ornament::after {
+  content: "";
+  height: 1px;
+  width: 54px;
+  background: linear-gradient(90deg, transparent, currentColor);
+}
+
+.ornament::after {
+  transform: rotate(180deg);
+}
+
+.hero-date {
+  font: 500 clamp(17px, 3vw, 24px) var(--serif);
+  letter-spacing: 3px;
+}
+
+.hero-place {
+  margin-top: 13px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #f2e6ee;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 35px;
+  padding: 15px 25px;
+  color: var(--ink);
+  background: #fff7ef;
+  border-radius: 2px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: .3s ease;
+}
+
+.hero-cta:hover {
+  background: var(--gold-light);
+  transform: translateY(-3px);
+}
+
+.scroll-note {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .8;
+}
+
+.scroll-note span {
+  display: block;
+  margin-top: 10px;
+  animation: bob 1.8s infinite;
+}
+
+.section {
+  padding: 100px 7%;
+}
+
+.section-inner {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.center { text-align: center; }
+
+.kicker {
+  color: var(--lavender-dark);
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.section-title {
+  font: 500 clamp(39px, 6vw, 65px)/1.05 var(--serif);
+  margin: 16px 0;
+  letter-spacing: -.8px;
+}
+
+.section-copy {
+  max-width: 530px;
+  margin: 18px auto 0;
+  color: var(--muted);
+  font: 400 17px/1.8 var(--serif);
+}
+
+.intro {
+  background:
+    radial-gradient(ellipse at 0 0, #e8d8ef8a, transparent 40%),
+    var(--cream);
+}
+
+.small-rule {
+  width: 55px;
+  height: 1px;
+  margin: 24px auto;
+  background: var(--gold);
+}
+
+.names-grid {
+  margin: 58px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 90px 1fr;
+  align-items: center;
+  max-width: 830px;
+  gap: 20px;
+}
+
+.name-card { padding: 20px 10px; }
+
+.name-card .role {
+  color: var(--lavender-dark);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.name-card h3 {
+  font: 500 clamp(36px, 5.5vw, 59px)/1.1 var(--serif);
+  margin: 15px 0;
+}
+
+.name-card .family {
+  color: var(--muted);
+  font: 400 15px/1.8 var(--serif);
+}
+
+.name-card .family strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.name-heart {
+  font: 400 54px var(--script);
+  color: var(--gold);
+}
+
+.countdown-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(125deg, #e9d9ef, #f8e8ed 58%, #f7eee5);
+}
+
+.countdown-section::before,
+.countdown-section::after {
+  content: "✧";
+  position: absolute;
+  color: #b89cc3;
+  font: 120px var(--serif);
+  opacity: .23;
+}
+
+.countdown-section::before { top: -22px; left: 5%; }
+.countdown-section::after { bottom: -40px; right: 5%; }
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 100px));
+  gap: 13px;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.time-box {
+  background: #ffffff91;
+  border: 1px solid #ffffffd9;
+  padding: 20px 8px;
+  border-radius: 3px;
+  box-shadow: 0 12px 35px #92729a0d;
+}
+
+.time-box strong {
+  display: block;
+  font: 500 clamp(29px, 5vw, 42px) var(--serif);
+}
+
+.time-box span {
+  display: block;
+  margin-top: 8px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.timeline {
+  max-width: 690px;
+  margin: 50px auto 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  bottom: 13px;
+  left: 50%;
+  width: 1px;
+  background: #dbc7d7;
+}
+
+.event {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 36px 1fr;
+  gap: 15px;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.event:nth-child(odd) .event-info { grid-column: 1; text-align: right; }
+.event:nth-child(even) .event-info { grid-column: 3; text-align: left; }
+.event:nth-child(odd) .event-time { grid-column: 3; text-align: left; }
+.event:nth-child(even) .event-time { grid-column: 1; text-align: right; }
+.event:nth-child(odd) .event-dot { grid-column: 2; grid-row: 1; }
+.event:nth-child(even) .event-dot { grid-column: 2; grid-row: 1; }
+
+.event-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  justify-self: center;
+  background: var(--gold);
+  box-shadow: 0 0 0 5px #ead9e9;
+  z-index: 1;
+}
+
+.event-info h3 {
+  margin: 0;
+  font: 500 30px var(--serif);
+}
+
+.event-info p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 7px 0 0;
+}
+
+.event-time {
+  font: 500 23px var(--serif);
+  color: #9678a4;
+}
+
+.gallery-section { background: #fbf5f7; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr 1fr;
+  gap: 14px;
+  margin-top: 43px;
+}
+
+.gallery-item {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  background: var(--lavender);
+}
+
+.gallery-item:nth-child(2) { margin-top: 28px; }
+.gallery-item:nth-child(3) { margin-top: 56px; }
+
+.gallery-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.gallery-item:hover img { transform: scale(1.07); }
+
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #ffffff5c;
+  pointer-events: none;
+  margin: 10px;
+}
+
+.venue {
+  background: var(--cream);
+}
+
+.venue-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 45px;
+  background: white;
+  border: 1px solid #eee3eb;
+  box-shadow: 0 24px 70px #5b405a0b;
+}
+
+.venue-photo {
+  min-height: 370px;
+  background:
+    linear-gradient(#34243a12, #34243a20),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1100&q=85")
+    center / cover;
+}
+
+.venue-details {
+  padding: clamp(25px, 5vw, 53px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.venue-details h3 {
+  font: 500 45px/1 var(--serif);
+  margin: 14px 0;
+}
+
+.venue-address {
+  color: var(--muted);
+  font: 16px/1.9 var(--serif);
+}
+
+.venue-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  margin-top: 14px;
+}
+
+.venue-meta .symbol {
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 21px;
+  margin-top: 24px;
+  border: 1px solid var(--lavender-dark);
+  background: var(--lavender-dark);
+  color: white;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: .25s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--ink);
+  border-color: #d8c7d9;
+}
+
+.map-wrap {
+  margin-top: 24px;
+  height: 320px;
+  overflow: hidden;
+  border: 1px solid #eee3eb;
+  background: #f3eaf3;
+}
+
+.map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.closing {
+  position: relative;
+  overflow: hidden;
+  padding: 105px 7%;
+  text-align: center;
+  color: white;
+  background:
+    linear-gradient(180deg, #302139dd, #39283fef),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=80")
+    center 58% / cover;
+}
+
+.closing .kicker { color: #e8d0b2; }
+
+.closing h2 {
+  margin: 20px auto;
+  font: 400 clamp(50px, 8vw, 86px)/1.05 var(--script);
+  color: #fff5fa;
+}
+
+.closing .section-copy { color: #e8dce8; }
+
+.closing .ornament { color: var(--gold-light); }
+
+.footer {
+  padding: 25px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  background: #241b2b;
+  color: #cfc0d0;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.footer strong {
+  color: #fff3f5;
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.petal {
+  position: fixed;
+  top: -25px;
+  left: 0;
+  z-index: 20;
+  width: 9px;
+  height: 13px;
+  border-radius: 100% 0 100% 0;
+  background: #f1cadb;
+  opacity: .75;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes arrive {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+@keyframes fall {
+  to {
+    transform: translate3d(var(--drift), 110vh, 0) rotate(650deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .topbar { padding: 20px 7%; }
+  .brand { font-size: 16px; letter-spacing: 2px; }
+  .topbar a { font-size: 8px; letter-spacing: 1px; }
+  .hero { min-height: 92svh; }
+  .hero::before { inset: 9px; }
+  .hero-content { padding-top: 100px; }
+  .hero .eyebrow { letter-spacing: 3px; font-size: 9px; }
+  .hero h1 { font-size: clamp(66px, 17vw, 100px); }
+  .hero-subtitle { letter-spacing: 2px; }
+  .hero-date { letter-spacing: 2px; }
+  .hero-place { letter-spacing: 1.5px; font-size: 9px; }
+  .section { padding: 74px 6%; }
+  .names-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 35px;
+  }
+  .name-card { padding: 18px 0; }
+  .name-card h3 { font-size: 49px; }
+  .name-heart { font-size: 43px; padding: 0; }
+  .countdown { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
+  .time-box { padding: 16px 3px; }
+  .time-box span { letter-spacing: .5px; font-size: 8px; }
+  .timeline { margin-top: 32px; }
+  .event { grid-template-columns: 1fr 20px 1fr; gap: 8px; }
+  .event-info h3 { font-size: 25px; }
+  .event-info p { font-size: 11px; }
+  .event-time { font-size: 19px; }
+  .gallery { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .gallery-item { height: 220px; }
+  .gallery-item:nth-child(2) { margin-top: 24px; }
+  .gallery-item:nth-child(3) {
+    grid-column: 1 / -1;
+    height: 230px;
+    margin: 0;
+  }
+  .venue-card { grid-template-columns: 1fr; }
+  .venue-photo { min-height: 255px; }
+  .venue-details h3 { font-size: 40px; }
+  .map-wrap { height: 280px; }
+  .closing { padding: 80px 6%; }
+  .footer { justify-content: center; text-align: center; }
+}
+
+@media (max-width: 360px) {
+  .countdown { gap: 4px; }
+  .time-box strong { font-size: 26px; }
+  .event { grid-template-columns: 1fr 14px 1fr; gap: 6px; }
+  .event-info h3 { font-size: 22px; }
+  .event-time { font-size: 17px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <a href="#home" class="brand">N <span style="color:#e9d6ac">&</span> A</a>
+  <a href="#venue">Wedding Details ↗</a>
+</header>
+
+<main>
+  <!-- CINEMATIC OPENING -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="eyebrow">With the blessings of our families</div>
+
+      <div class="ornament">✧ ❀ ✧</div>
+
+      <h1>Nida <span class="ampersand">&</span><br>Arshad</h1>
+
+      <div class="hero-subtitle">A Beautiful Beginning</div>
+
+      <div class="ornament">✧</div>
+
+      <div class="hero-date">THURSDAY · 12 NOVEMBER 2026</div>
+
+      <div class="hero-place">Milan Vatika · Agra, India</div>
+
+      <a class="hero-cta" href="#invitation">
+        Discover Our Invitation <span>↓</span>
+      </a>
+    </div>
+
+    <div class="scroll-note">
+      A celebration of love
+      <span>↓</span>
+    </div>
+  </section>
+
+  <!-- INVITATION -->
+  <section class="section intro center" id="invitation">
+    <div class="section-inner reveal">
+      <div class="kicker">Together with our families</div>
+
+      <h2 class="section-title">A Story Written in the Stars</h2>
+
+      <div class="small-rule"></div>
+
+      <p class="section-copy">
+        Two hearts, two families, and a beautiful new chapter.
+        With love and joy, we invite you to join us as we celebrate
+        the beginning of our forever.
+      </p>
+
+      <div class="names-grid">
+        <div class="name-card">
+          <div class="role">The Bride</div>
+          <h3>Nida Khan</h3>
+          <div class="family">
+            <strong>D/O Kayyum Khan</strong><br>
+            G/D/O Late Ayyub Khan
+          </div>
+        </div>
+
+        <div class="name-heart">&</div>
+
+        <div class="name-card">
+          <div class="role">The Groom</div>
+          <h3>Mohd Arshad</h3>
+          <div class="family">
+            With love, blessings<br>
+            and best wishes
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="section countdown-section center">
+    <div class="section-inner reveal">
+      <div class="kicker">The countdown begins</div>
+      <h2 class="section-title">Until Our Special Day</h2>
+      <p class="section-copy">
+        A beautiful day, a cherished promise, and memories to last forever.
+      </p>
+
+      <div class="countdown" aria-label="Countdown to the wedding">
+        <div class="time-box">
+          <strong id="days">--</strong>
+          <span>Days</span>
+        </div>
+        <div class="time-box">
+          <strong id="hours">--</strong>
+          <span>Hours</span>
+        </div>
+        <div class="time-box">
+          <strong id="minutes">--</strong>
+          <span>Minutes</span>
+        </div>
+        <div class="time-box">
+          <strong id="seconds">--</strong>
+          <span>Seconds</span>
+        </div>
+      </div>
+
+      <p id="countdown-note" style="font-size:11px;letter-spacing:1px;margin-top:22px;color:#77677c">
+        THURSDAY · 12 NOVEMBER 2026
+      </p>
+    </div>
+  </section>
+
+  <!-- PROGRAMME -->
+  <section class="section center" id="programme">
+    <div class="section-inner reveal">
+      <div class="kicker">Save the date</div>
+      <h2 class="section-title">The Wedding Celebration</h2>
+      <div class="small-rule"></div>
+      <p class="section-copy">
+        Your presence will make our celebration even more special.
+        We look forward to welcoming you.
+      </p>
+
+      <div class="timeline">
+        <article class="event">
+          <div class="event-info">
+            <h3>Dinner</h3>
+            <p>An evening of warmth, delicious food and togetherness.</p>
+          </div>
+          <div class="event-dot"></div>
+          <div class="event-time">07:00 PM</div>
+        </article>
+
+        <article class="event">
+          <div class="event-time">09:00 PM</div>
+          <div class="event-dot"></div>
+          <div class="event-info">
+            <h3>Baraat</h3>
+            <p>Join us for the joy and excitement of the celebration.</p>
+          </div>
+        </article>
+
+        <!-- Add the Nikah time here once confirmed. -->
+      </div>
+    </div>
+  </section>
+
+  <!-- VISUAL GALLERY -->
+  <section class="section gallery-section center">
+    <div class="section-inner reveal">
+      <div class="kicker">A day to remember</div>
+      <h2 class="section-title">Made of Beautiful Moments</h2>
+      <p class="section-copy">
+        A little romance, a little magic, and a lifetime of memories.
+      </p>
+
+      <div class="gallery">
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
+            alt="Elegant wedding celebration"
+            loading="lazy">
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80"
+            alt="Romantic wedding table details"
+            loading="lazy">
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1100&q=80"
+            alt="Beautiful wedding decor"
+            loading="lazy">
+        </div>
+      </div>
+
+      <p style="font:italic 15px var(--serif);color:#92799a;margin-top:30px">
+        Images are illustrative wedding inspiration.
+      </p>
+    </div>
+  </section>
+
+  <!-- VENUE + MAP -->
+  <section class="section venue center" id="venue">
+    <div class="section-inner reveal">
+      <div class="kicker">We look forward to welcoming you</div>
+      <h2 class="section-title">Find Your Way to Us</h2>
+      <p class="section-copy">
+        Join our families in Agra for an evening of love, happiness and celebration.
+      </p>
+
+      <div class="venue-card" style="text-align:left">
+        <div class="venue-photo" role="img" aria-label="Romantic wedding venue inspiration"></div>
+
+        <div class="venue-details">
+          <div class="kicker">Our Wedding Venue</div>
+          <h3>Milan Vatika</h3>
+
+          <div class="venue-address">
+            Arjun Nagar Road, Kheriya Mod,<br>
+            Ajeet Nagar, Agra,<br>
+            Uttar Pradesh 282001, India
+          </div>
+
+          <div class="venue-meta">
+            <span class="symbol">✧</span>
+            Thursday, 12 November 2026
+          </div>
+
+          <div class="venue-meta">
+            <span class="symbol">✧</span>
+            Dinner at 7:00 PM · Baraat at 9:00 PM
+          </div>
+
+          <a
+            class="button"
+            href="https://www.google.com/maps/dir/?api=1&destination=Milan+Vatika%2C+Arjun+Nagar+Road%2C+Kheriya+Mod%2C+Agra%2C+Uttar+Pradesh+282001"
+            target="_blank"
+            rel="noopener noreferrer">
+            Get Directions ↗
+          </a>
+
+          <a
+            class="button button-outline"
+            href="https://www.mappls.com/t28tdz"
+            target="_blank"
+            rel="noopener noreferrer">
+            Open in Mappls ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="map-wrap">
+        <iframe
+          title="Map showing Milan Vatika, Kheriya Mod, Agra"
+          src="https://maps.google.com/maps?q=Milan%20Vatika%2C%20Arjun%20Nagar%20Road%2C%20Kheriya%20Mod%2C%20Agra%2C%20Uttar%20Pradesh%20282001&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <p style="font-size:11px;line-height:1.8;color:#817181;margin-top:13px">
+        Map pins and routes are provided by external map services.
+        Please confirm the destination before travelling.
+      </p>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="section-inner reveal">
+      <div class="kicker">A little note from our hearts</div>
+
+      <h2>We Await Your Presence</h2>
+
+      <div class="ornament">✧ ❀ ✧</div>
+
+      <p class="section-copy">
+        Your blessings, love and presence will make our special day
+        even more memorable. We cannot wait to celebrate with you.
+      </p>
+
+      <div style="font:400 34px var(--script);margin-top:32px;color:#ead8a9">
+        With love, Nida & Arshad
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <strong>Nida <span style="color:#d9bd86">&</span> Arshad</strong>
+  <span>12 · 11 · 2026</span>
+  <span>Made with love & blessings</span>
+</footer>
+
+<script>
+/* Scroll reveal */
+const revealElements = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+} else {
+  revealElements.forEach(el => el.classList.add("visible"));
+}
+
+/* Countdown: 12 November 2026, 7 PM India Standard Time */
+const weddingDate = new Date("2026-11-12T19:00:00+05:30").getTime();
+
+const fields = {
+  days: document.getElementById("days"),
+  hours: document.getElementById("hours"),
+  minutes: document.getElementById("minutes"),
+  seconds: document.getElementById("seconds")
+};
+
+const countdownNote = document.getElementById("countdown-note");
+
+function updateCountdown() {
+  const remaining = weddingDate - Date.now();
+
+  if (remaining <= 0) {
+    Object.values(fields).forEach(el => el.textContent = "00");
+    countdownNote.textContent = "THE CELEBRATION DAY IS HERE";
+    return;
+  }
+
+  fields.days.textContent = String(
+    Math.floor(remaining / 86400000)
+  ).padStart(2, "0");
+
+  fields.hours.textContent = String(
+    Math.floor((remaining % 86400000) / 3600000)
+  ).padStart(2, "0");
+
+  fields.minutes.textContent = String(
+    Math.floor((remaining % 3600000) / 60000)
+  ).padStart(2, "0");
+
+  fields.seconds.textContent = String(
+    Math.floor((remaining % 60000) / 1000)
+  ).padStart(2, "0");
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+/* Subtle falling petals: lightweight, with reduced-motion support */
+const reduceMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
+
+if (!reduceMotion) {
+  let lastPetal = 0;
+
+  function createPetal() {
+    if (document.hidden || document.documentElement.clientWidth < 1) return;
+
+    const petal = document.createElement("span");
+    petal.className = "petal";
+
+    const left = Math.random() * window.innerWidth;
+    const duration = 7 + Math.random() * 7;
+    const drift = `${Math.round(Math.random() * 160 - 80)}px`;
+
+    petal.style.left = `${left}px`;
+    petal.style.animationDuration = `${duration}s`;
+    petal.style.setProperty("--drift", drift);
+    petal.style.opacity = String(0.25 + Math.random() * 0.5);
+    petal.style.transform = `scale(${0.6 + Math.random() * 0.8})`;
+
+    document.body.appendChild(petal);
+
+    window.setTimeout(() => petal.remove(), duration * 1000);
+  }
+
+  function petalLoop(timestamp) {
+    if (timestamp - lastPetal > 800) {
+      createPetal();
+      lastPetal = timestamp;
+    }
+    window.requestAnimationFrame(petalLoop);
+  }
+
+  window.requestAnimationFrame(petalLoop);
+}
+</script>
+
+</body>
+</html>
