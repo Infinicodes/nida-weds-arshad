@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
 :root {
@@ -33,6 +33,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 85px;
+  scroll-padding-bottom: 90px;
 }
 
 body {
@@ -41,6 +42,7 @@ body {
   color: var(--ink);
   font-family: var(--sans);
   overflow-x: hidden;
+  padding-bottom: 75px; /* Space for bottom nav */
 }
 
 a { color: inherit; text-decoration: none; }
@@ -49,6 +51,74 @@ button { font: inherit; }
 ::selection {
   background: var(--lavender);
   color: var(--ink);
+}
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: linear-gradient(135deg, #2d1e36, #3f2845 50%, #24192b);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader-content {
+  text-align: center;
+  padding: 20px;
+  animation: arrive 1s ease both;
+}
+
+.preloader-subtitle {
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 15px;
+}
+
+.preloader-title {
+  font: 400 clamp(54px, 10vw, 92px) var(--script);
+  color: #fff5fa;
+  margin: 0;
+  text-shadow: 0 5px 25px rgba(232, 181, 200, 0.3);
+}
+
+.preloader-heart {
+  color: var(--gold-light);
+  font-size: 0.6em;
+  padding: 0 10px;
+}
+
+.preloader-loader {
+  margin-top: 25px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.preloader-loader span {
+  width: 8px;
+  height: 8px;
+  background: var(--gold-light);
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.preloader-loader span:nth-child(1) { animation-delay: -0.32s; }
+.preloader-loader span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1.0); }
 }
 
 .topbar {
@@ -584,6 +654,77 @@ button { font: inherit; }
   font-weight: 500;
 }
 
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(248, 231, 237, 0.92);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(219, 199, 215, 0.5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 5px;
+  box-shadow: 0 -4px 20px rgba(56, 43, 60, 0.08);
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: var(--ink);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.bottom-nav-item i {
+  font-size: 16px;
+  color: var(--lavender-dark);
+  transition: transform 0.2s ease;
+}
+
+.bottom-nav-item:hover i {
+  transform: translateY(-2px);
+  color: var(--gold);
+}
+
+.designer-badge {
+  background: linear-gradient(135deg, #382b3c, #4a3750);
+  color: #fff5fa;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  border-top: 1px solid rgba(234, 216, 169, 0.2);
+}
+
+.designer-badge a {
+  color: var(--gold-light);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.designer-badge a:hover {
+  opacity: 0.85;
+}
+
 .petal {
   position: fixed;
   top: -25px;
@@ -678,6 +819,8 @@ button { font: inherit; }
   .map-wrap { height: 280px; }
   .closing { padding: 80px 6%; }
   .footer { justify-content: center; text-align: center; }
+  .bottom-nav-item span { font-size: 8px; }
+  .bottom-nav-item i { font-size: 14px; }
 }
 
 @media (max-width: 360px) {
@@ -691,6 +834,18 @@ button { font: inherit; }
 </head>
 
 <body>
+
+<div id="preloader">
+  <div class="preloader-content">
+    <div class="preloader-subtitle">Wedding Invitation</div>
+    <h2 class="preloader-title">Nida <span class="preloader-heart">&</span> Arshad Weds</h2>
+    <div class="preloader-loader">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>
 
 <header class="topbar">
   <a href="#home" class="brand">N <span style="color:#e9d6ac">&</span> A</a>
@@ -966,7 +1121,44 @@ button { font: inherit; }
   <span>Made with love & blessings</span>
 </footer>
 
+<div class="designer-badge">
+  <span>✨ Crafted with elegance for Nida & Arshad</span>
+  <a href="https://wa.me/917351760788?text=Hi%2C%20I%20want%20to%20get%20a%20wedding%20website%20designed" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-whatsapp"></i> Contact Designer for your wedding ↗
+  </a>
+</div>
+
+<!-- Bottom Fixed Navigation Bar -->
+<nav class="bottom-nav" aria-label="Bottom Navigation">
+  <a href="#venue" class="bottom-nav-item">
+    <i class="fa-solid fa-map-location-dot"></i>
+    <span>Venue</span>
+  </a>
+  <a href="#programme" class="bottom-nav-item">
+    <i class="fa-solid fa-calendar-days"></i>
+    <span>Date</span>
+  </a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=Milan+Vatika%2C+Arjun+Nagar+Road%2C+Kheriya+Mod%2C+Agra%2C+Uttar+Pradesh+282001" target="_blank" rel="noopener noreferrer" class="bottom-nav-item">
+    <i class="fa-solid fa-location-arrow"></i>
+    <span>Live Loc</span>
+  </a>
+  <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="bottom-nav-item">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>Contact</span>
+  </a>
+</nav>
+
 <script>
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+      preloader.classList.add("fade-out");
+      setTimeout(() => preloader.remove(), 600);
+    }
+  }, 2000);
+});
+
 /* Scroll reveal */
 const revealElements = document.querySelectorAll(".reveal");
 
